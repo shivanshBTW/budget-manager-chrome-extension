@@ -1,0 +1,21 @@
+{
+  "name": "Demo ",
+  "version": "1.0",
+  "description": "Build an Extension!",
+  "permissions": [
+    "storage",
+    "notifications",
+    "contextMenus"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 2,
+  "options_page": "options.html",
+  "background": {
+    "scripts": [
+      "javascript/eventPage.js"
+    ],
+    "persistent": false
+  }
+}
