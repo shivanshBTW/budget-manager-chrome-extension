@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="./stylesheets/bootstrap.min.css">
     <link rel="stylesheet" href="./stylesheets/popup.css">
 </head>
 <body>
-<h1>budget manager</h1>
-<h2>total money spent <span id="total">0</span></h2>
-<h2>Limit <span id="limit"></span></h2>
-<h3>Enter Amount</h3>
-<input type="text" id="amount">
-<input type="submit" id="spendAmount" value="spend">
+<div class="card">
+    <h5 class="card-header">
+        Tax Extension
+    </h5>
+    <div class="card-body ml-0 mr-0">
+        <div class="card-text">This extension can help you to easily refill the Tax Details</div>
+        <div class="card-text mt-2">Click on the button below to be redirected to the page</div>
+        <div id="openLinkButton" target="_blank" class="btn btn-primary mt-4">Tax Filling Page</div>
+    </div>
+</div>
 <script src="javascript/popup.js"></script>
 </body>
 </html>
