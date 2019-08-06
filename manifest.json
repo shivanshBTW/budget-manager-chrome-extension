@@ -1,42 +1,21 @@
 {
-  "name": "Tax Extension",
+  "name": "Demo ",
   "version": "1.0",
-  "description": "Automation of Tax Payment System",
+  "description": "Build an Extension!",
   "permissions": [
-    "tabs",
-    "webNavigation",
     "storage",
-    "https://onlineservices.tin.egov-nsdl.com/etaxnew/PopServlet*",
-    "https://onlineservices.tin.egov-nsdl.com/etaxnew/SubmitTdsn*",
-    "https://onlineservices.tin.egov-nsdl.com/etaxnew/tdsnontds.jsp"
+    "notifications",
+    "contextMenus"
   ],
   "browser_action": {
-    "default_popup": "popup.html",
-    "default_title": "Tax Extension"
+    "default_popup": "popup.html"
   },
   "manifest_version": 2,
+  "options_page": "options.html",
   "background": {
     "scripts": [
-      "javascript/background.js"
+      "javascript/eventPage.js"
     ],
     "persistent": false
-  },
-  "content_scripts": [
-    {
-      "matches": [
-        "https://onlineservices.tin.egov-nsdl.com/etaxnew/PopServlet*",
-        "https://onlineservices.tin.egov-nsdl.com/etaxnew/SubmitTdsn*"
-      ],
-      "js": [
-        "javascript/content.js"
-      ],
-      "css": [
-        "stylesheets/content.css"
-      ]
-    }
-  ],
-  "content_security_policy": "script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'",
-  "web_accessible_resources": [
-    "javascript/inject.js"
-  ]
+  }
 }
